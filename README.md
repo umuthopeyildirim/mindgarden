@@ -17,6 +17,4 @@ Entry table/ Feeling table/ User table
 
 ## Resources
 
-- [create-react-app][]
-
 [create-react-app]: https://create-react-app.dev/docs/getting-started
