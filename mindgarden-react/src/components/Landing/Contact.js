@@ -2,7 +2,7 @@ import { Hero, Button, Card, Input, Textarea, Form} from "react-daisyui";
 
 function ContactHero() {
     return (
-        <div className="py-8 space-y-10">
+        <div className="py-8 space-y-10" id="contact">
             <Hero>
                 <Hero.Content className="flex-col lg:flex-row">
                     <div className="text-center space-y-7">

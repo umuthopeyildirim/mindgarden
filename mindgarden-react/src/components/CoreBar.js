@@ -18,7 +18,7 @@ function LandingBar(){
                             <Link href="#about">About</Link>
                         </Menu.Item>
                         <Menu.Item>
-                            <Link href="#features">Features</Link>
+                            <Link href="#our-mission">Our Mission</Link>
                         </Menu.Item>
                         <Menu.Item>
                             <Link href="#contact">Contact</Link>

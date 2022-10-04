@@ -3,7 +3,7 @@ import { Hero, Divider } from "react-daisyui"
 function AboutHero() {
   return(
     <>
-      <Hero>
+      <Hero id="about">
         <Hero.Overlay className="bg-opacity-10" />
         <Hero.Content className="text-center">
           <img src="/img/MindGarden_Team.jpeg" alt="Hero" className="object-cover h-96 rounded-xl mt-10" />
@@ -55,14 +55,14 @@ function AboutHero() {
         </div>
       </div>
       <Hero>
-        <Hero.Overlay className="bg-opacity-10" />
+        <Hero.Overlay className="bg-opacity-10" id="our-mission" />
         <Hero.Content>
           <div className="max-w-md pr-24">
             <h1 className="text-5xl font-bold">Our Mission</h1>
             <p className="py-6">
               “To spread the power of optimism.”
             </p>
-            <p className="py-6">
+            <p className="py-1">
               “For our better yesterday, today, and tomorrow”
             </p>
           </div>

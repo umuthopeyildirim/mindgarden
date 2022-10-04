@@ -20,7 +20,7 @@ function LandingFooter(){
             <div>
                 <Footer.Title>Company</Footer.Title>
                 <a href="#about" className="link link-hover">About</a>
-                <a href="#features" className="link link-hover">Features</a>
+                <a href="#our-mission" className="link link-hover">Our Mission</a>
                 <a href="#contact" className="link link-hover">Contact</a>
             </div>
         </Footer>

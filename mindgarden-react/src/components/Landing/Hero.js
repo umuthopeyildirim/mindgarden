@@ -2,7 +2,7 @@ import { Hero, Button } from "react-daisyui"
 
 function LandingHero() {
   return(
-    <Hero className="bg-gray-900 text-white">
+    <Hero className="bg-gray-900 text-white" id="home">
       <Hero.Overlay className="bg-opacity-10" />
       <Hero.Content className="text-center">
         <div className="max-w-md">
