@@ -8,7 +8,6 @@ function Landing(){
     return (
         <>
             <CoreBar />
-            {/* Content */}
             <LandingHero />
             <AboutHero />
             <ContactHero />

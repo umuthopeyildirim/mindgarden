@@ -7,9 +7,9 @@ function ContactHero() {
                 <Hero.Content className="flex-col lg:flex-row">
                     <div className="text-center space-y-7">
                         <h1 className="text-5xl">Need help with anything?</h1>
-                        <p className="space-y-7">Let us know how we can help. Contact MindGarden support team by filling out contact details to your right, or you can directly email us.</p>
-                        <a className="space-y-7" href="tel:18889580569">+1 (888) 958 0569</a><br></br>
-                        <a className="space-y-7" href="mailto:info@mindgarden.ml">info@mindgarden.ml</a>
+                        <p className="space-y-7">Let us know how we can help. Contact MindGarden support team by filling out contact details to your right, or you can directly email us.</p><br></br>
+                        <a className="space-y-7 text-sky-400 after:content-['_↗'] ..." href="tel:18889580569">+1 (888) 958 0569</a><br></br>
+                        <a className="space-y-7 text-sky-400 after:content-['_↗'] ..." href="mailto:info@mindgarden.ml">info@mindgarden.ml</a>
                         <p>
                             615, 11 Broadway,<br></br>
                             New York, NY
