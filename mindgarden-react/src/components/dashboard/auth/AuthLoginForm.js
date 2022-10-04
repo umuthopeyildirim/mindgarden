@@ -12,12 +12,12 @@ function AuthLoginForm({ email, setEmail, password, setPassword, signin, signinG
                 </div>
             </div>
             <div className="flex justify-center self-center  z-10">
-                <div className="p-12 bg-gradient-to-b from-gray-900 via-gray-900 to-purple-800 mx-auto rounded-3xl w-96 ">
+                <div className="p-12 bg-gradient-to-b from-gray-900 via-gray-900 to-blue-900 mx-auto rounded-3xl w-96 ">
                     <div className="mb-7">
                         <h3 className="font-semibold text-2xl text-gray-300">Sign In </h3>
                         <p className="text-gray-500">
                             Don'thave an account?  
-                            <a href="register" className="text-sm text-purple-700 hover:text-purple-600">
+                            <a href="register" className="text-sm text-blue-700 hover:text-blue-600">
                                 Sign Up
                             </a>
                         </p>
@@ -28,12 +28,12 @@ function AuthLoginForm({ email, setEmail, password, setPassword, signin, signinG
                     </div>
                     <div className="flex items-center justify-between py-2">
                         <div className="text-sm ml-auto">
-                            <a href="password-recovery" className="text-purple-700 hover:text-purple-600">
+                            <a href="password-recovery" className="text-blue-700 hover:text-blue-600">
                                 Forgot your password?
                             </a>
                         </div>
                     </div>
-                    <Button onClick={signin} type="submit" className="w-full flex justify-center bg-purple-800  hover:bg-purple-700 text-gray-100 p-3  rounded-lg tracking-wide font-semibold  cursor-pointer transition ease-in duration-500">
+                    <Button onClick={signin} type="submit" className="w-full flex justify-center bg-blue-800  hover:bg-blue-700 text-gray-100 p-3  rounded-lg tracking-wide font-semibold  cursor-pointer transition ease-in duration-500">
                         Sign in
                     </Button>
                 </div>

@@ -3,7 +3,7 @@ import { Button } from "react-daisyui";
 function AuthBar(){
     return (  
         <>
-            <div className="bg-purple-900 absolute top-0 left-0 bg-gradient-to-b from-gray-900 via-gray-900 to-purple-800 bottom-0 leading-5 h-full w-full overflow-hidden">
+            <div className="bg-blue-600 absolute top-0 left-0 bg-gradient-to-b from-gray-900 via-gray-900 to-blue-800 bottom-0 leading-5 h-full w-full overflow-hidden">
                 <svg className="relative block " style={{width: 'calc(100% + 10px)'}} data-name="Layer 1"
                     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
                 </svg>

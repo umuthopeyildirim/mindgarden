@@ -26,7 +26,7 @@ function LandingBar(){
                     </Menu>
                 </Navbar.Center>
                 <Navbar.End>
-                    <Button color="primary" href="login">Go to Dashboard</Button>
+                    <Button color="info" href="login">Go to Dashboard</Button>
                 </Navbar.End>
             </Navbar>
         </div>
