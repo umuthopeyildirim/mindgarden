@@ -5,7 +5,7 @@ class CreateEntries < ActiveRecord::Migration[6.1]
       t.text :entry
       t.integer :user_id
       t.integer :feeling_id
-      t.timestamps
+      t.datetime :date
     end
   end
 end
