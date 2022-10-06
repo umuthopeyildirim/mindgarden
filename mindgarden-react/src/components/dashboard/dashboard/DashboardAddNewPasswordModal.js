@@ -1,8 +1,8 @@
 import { Modal, Input, Button } from "react-daisyui";
 
-function DashboardAddNewPasswordModal({ handleToogleAddNewPassword, handleAddNewPassword, setName, name, setEmail, email, setPassword, password, setUrl, url }) {
+function DashboardAddNewPasswordModal({ handleToogleAddNewEntry, handleAddNewPassword, setName, name, setEmail, email, setPassword, password, setUrl, url }) {
     return (
-        <Modal open={handleToogleAddNewPassword} onClickBackdrop={handleToogleAddNewPassword}>
+        <Modal open={handleToogleAddNewEntry} onClickBackdrop={handleToogleAddNewEntry}>
             <Modal.Header className="font-bold">
                 Add New Entry
             </Modal.Header>

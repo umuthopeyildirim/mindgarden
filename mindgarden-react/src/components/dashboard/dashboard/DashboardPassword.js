@@ -1,7 +1,7 @@
-import { Hero, Avatar } from "react-daisyui";
+import { Hero } from "react-daisyui";
 
 function DashboardPassword({ selectedPassword }){
-    // Get only domain from selectedPassword.url
+    console.log(selectedPassword);
     return (
         <Hero className="w-2/4">
             <Hero.Content className="text-center">
@@ -9,23 +9,17 @@ function DashboardPassword({ selectedPassword }){
                     {selectedPassword ?
                         <>
                             <div className="flex-row text-center">
-                                <Avatar shape="square" referrerPolicy="no-referrer" src={"https://logo.clearbit.com/"+selectedPassword.url.replace(/(^\w+:|^)\/\//, '').split('/')[0]} alt="logo" className="mx-auto" />
-                                <h1 className="text-2xl font-bold">{selectedPassword.url.replace(/(^\w+:|^)\/\//, '').split('/')[0]}</h1>
+                                <h1 className="text-2xl font-bold">{selectedPassword.title}</h1>
                             </div>
                             <div className="flex-row text-center space-y-5">
                                 <div className="flex flex-row space-x-5">
-                                    <span className="font-bold">Email Adress</span>
-                                    <p>{selectedPassword.email}</p>
+                                    <span className="font-bold">Entry</span>
+                                    <p>{selectedPassword.entry}</p>
                                     <button>Copy</button>
                                 </div>
                                 <div className="flex flex-row space-x-5">
-                                    <span className="font-bold">Password</span>
-                                    <p>{selectedPassword.password}</p>
-                                    <button>Copy</button>
-                                </div>
-                                <div className="flex flex-row space-x-5">
-                                    <span className="font-bold">Website</span>
-                                    <a href={selectedPassword.url} rel="noreferrer" target="_blank">{selectedPassword.url}</a>
+                                    <span className="font-bold">Date</span>
+                                    <p>{selectedPassword.date}</p>
                                     <button>Copy</button>
                                 </div>
                             </div>
