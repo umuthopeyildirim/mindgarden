@@ -18,14 +18,33 @@ function Login(){
                 icon: "error",
                 confirmButtonText: "Ok"
             })
-        }else{
-            MySwal.fire({
-                title: <p>Success</p>,
-                text: "You have successfully logged in",
-                icon: "success",
-                confirmButtonText: "Ok"
-            })
         }
+        else{
+            fetch("http://localhost:9292/login", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    email: email,
+                    password: password
+            })
+        })
+        .then(res => res.json())
+        .then(data => {
+            if(data.id !== undefined){
+                localStorage.setItem("id", data.id);
+                window.location.href = "/dashboard";
+            }else{
+                MySwal.fire({
+                    title: "Error",
+                    text: "You have entered an invalid email or password",
+                    icon: "error",
+                    confirmButtonText: "Ok"
+                })
+            }
+        })
+    }
     }
 
     return (
