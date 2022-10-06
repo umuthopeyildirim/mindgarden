@@ -1,7 +1,7 @@
 import { Button } from "react-daisyui";
 import { GiNotebook } from "react-icons/gi";
 
-function DashboardPasswordLi({ entries, handleSelectedPassword} ) {
+function DashboardPasswordLi({ entries, handleSelectedEntry} ) {
     const CapitalizeFirstLetter = (str) => {
         return str.length ? str.charAt(0).toUpperCase() + str.slice(1) : str;
     };
@@ -10,7 +10,7 @@ function DashboardPasswordLi({ entries, handleSelectedPassword} ) {
         <>
             {entries.map((element, key) => {
                 return (
-                <li key={key} onClick={() => handleSelectedPassword(key)}>
+                <li key={key} onClick={() => handleSelectedEntry(key)}>
                     <Button color="accent" className="menu-link w-full">
                     <div className="flex justify-between">
                         <div className="flex text-white">
@@ -28,7 +28,7 @@ function DashboardPasswordLi({ entries, handleSelectedPassword} ) {
     );
 }
 
-function DashboardPasswordList({ entries, handleSelectedPassword, handleToogleAddNewEntry }) {
+function DashboardPasswordList({ entries, handleSelectedEntry, handleToogleAddNewEntry }) {
   return (
     <>
       <div className="bg-slate-50 text-gray-800 max-w-screen-md w-2/6 h-screen px-6 py-6 border-t border-r space-y-2.5">
@@ -46,7 +46,7 @@ function DashboardPasswordList({ entries, handleSelectedPassword, handleToogleAd
         <article className="h-[90%] overflow-scroll">
           <ul className="bg-slate-50 flex flex-col space-y-3">
             {   entries?
-                DashboardPasswordLi({ entries, handleSelectedPassword})
+                DashboardPasswordLi({ entries, handleSelectedEntry})
                 :
                 <div className="flex col">
                     <h1 className="text-2xl text-center">No entry found</h1>
