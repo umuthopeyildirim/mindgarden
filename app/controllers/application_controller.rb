@@ -121,7 +121,7 @@ class ApplicationController < Sinatra::Base
       entry: params[:entry] || entry.entry, 
       feeling_id: params[:feeling_id] || entry.feeling_id, 
       date: params[:date] || entry.date)  
-      status 200
+    status 200
     entry.to_json
   end
 
