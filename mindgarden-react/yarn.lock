@@ -8257,6 +8257,16 @@ svgo@^2.7.0:
     picocolors "^1.0.0"
     stable "^0.1.8"
 
+sweetalert2-react-content@^5.0.3:
+  version "5.0.3"
+  resolved "https://registry.yarnpkg.com/sweetalert2-react-content/-/sweetalert2-react-content-5.0.3.tgz#1c7d38d01cbaf7abc7311ef5d77698ed23dc1087"
+  integrity sha512-DQXblZn0LHTvmaZquNQncZIE3Ljox85sAKKbXjYlDyFejyOibHwprAVvtQQpAUG3bgvyDUeAOE/BDFcVx6KUow==
+
+sweetalert2@^11.4.37:
+  version "11.4.37"
+  resolved "https://registry.yarnpkg.com/sweetalert2/-/sweetalert2-11.4.37.tgz#cbb3c95fe327a058a2fb801d42236138ab4babc9"
+  integrity sha512-8thABjykReRzpMlgEY0BP876ZqI6dD9WxMpFftHt4dmUKQzDv23Td6Q6cz6YybyiYWPCodBk57PeIobqaGNgqw==
+
 symbol-tree@^3.2.4:
   version "3.2.4"
   resolved "https://registry.yarnpkg.com/symbol-tree/-/symbol-tree-3.2.4.tgz#430637d248ba77e078883951fb9aa0eed7c63fa2"
