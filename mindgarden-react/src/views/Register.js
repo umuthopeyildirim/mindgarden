@@ -4,13 +4,14 @@ import AuthRegisterForm from "../components/dashboard/auth/AuthRegisterForm";
 
 function Register(){
     const [name, setName] = useState("");
+    const [username, setUsername] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
     return (
         <>
             <AuthBar />
-            <AuthRegisterForm name={name} setName={setName} email={email} setEmail={setEmail} password={password} setPassword={setPassword} />
+            <AuthRegisterForm name={name} setName={setName} username={username} setUsername={setUsername} email={email} setEmail={setEmail} password={password} setPassword={setPassword} />
         </>
     );
 }

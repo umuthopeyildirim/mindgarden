@@ -33,12 +33,12 @@ function DashboardPasswordList({ passwords, handleSelectedPassword, handleToogle
     <>
       <div className="bg-slate-50 text-gray-800 max-w-screen-md w-2/6 h-screen px-6 py-6 border-t border-r space-y-2.5">
         <div className="flex justify-between">
-          <h1 className="text-2xl font-semibold">Passwords</h1>
+          <h1 className="text-2xl font-semibold">Entries</h1>
           <button
             onClick={handleToogleAddNewPassword}
             className="bg-slate-500 text-white rounded-md px-4 py-2"
           >
-            Add Password
+            Add Entry
           </button>
         </div>
         <div className="flex justify-between">
@@ -55,7 +55,7 @@ function DashboardPasswordList({ passwords, handleSelectedPassword, handleToogle
                 DashboardPasswordLi({ passwords, handleSelectedPassword})
                 :
                 <div className="flex col">
-                    <h1 className="text-2xl text-center">No passwords found</h1>
+                    <h1 className="text-2xl text-center">No entry found</h1>
                 </div>
             }
           </ul>

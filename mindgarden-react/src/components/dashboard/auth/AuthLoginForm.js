@@ -1,6 +1,6 @@
 import { Input, Button } from "react-daisyui";
 
-function AuthLoginForm({ email, setEmail, password, setPassword, signin, signinGoogle }) {
+function AuthLoginForm({ email, setEmail, password, setPassword, signin }) {
     return (
         <div className="relative  mt-20 sm:mt-0 min-h-screen  sm:flex sm:flex-row  justify-center bg-transparent p-6 sm:p-24 sm:pb-0 rounded-3xl shadow-xl">
             <div className="flex-col flex  self-center lg:p-14 sm:max-w-4xl xl:max-w-md  z-10">
@@ -27,13 +27,8 @@ function AuthLoginForm({ email, setEmail, password, setPassword, signin, signinG
                         <Input value={password} onChange={(e) => setPassword(e.target.value)} className=" w-full text-sm text-white px-4 py-3 bg-gray-900 border border-gray-700 rounded-lg focus:outline-none focus:border-purple-400" type="password" placeholder="Password"></Input>
                     </div>
                     <div className="flex items-center justify-between py-2">
-                        <div className="text-sm ml-auto">
-                            <a href="password-recovery" className="text-blue-700 hover:text-blue-600">
-                                Forgot your password?
-                            </a>
-                        </div>
                     </div>
-                    <Button onClick={signin} type="submit" className="w-full flex justify-center bg-blue-800  hover:bg-blue-700 text-gray-100 p-3  rounded-lg tracking-wide font-semibold  cursor-pointer transition ease-in duration-500">
+                    <Button onClick={signin} type="submit" className="w-full flex justify-center bg-blue-800 hover:bg-blue-700 text-gray-100 p-3  rounded-lg tracking-wide font-semibold  cursor-pointer transition ease-in duration-500">
                         Sign in
                     </Button>
                 </div>

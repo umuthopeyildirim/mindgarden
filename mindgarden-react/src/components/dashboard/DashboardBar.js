@@ -21,8 +21,6 @@ function DashboardBar({ logout, page }){
                             </div>
                         </Button>
                         <Dropdown.Menu className="w-52 menu-compact">
-                            <Dropdown.Item href="/profile">Profile</Dropdown.Item>
-                            <Dropdown.Item>Settings</Dropdown.Item>
                             <Dropdown.Item onClick={logout}>Logout</Dropdown.Item>
                         </Dropdown.Menu>
                     </Dropdown>

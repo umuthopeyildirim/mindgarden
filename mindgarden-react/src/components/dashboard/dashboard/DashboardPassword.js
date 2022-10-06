@@ -31,7 +31,7 @@ function DashboardPassword({ selectedPassword }){
                             </div>
                         </>
                     :
-                        <h1 className="text-2xl font-bold">No password selected</h1>
+                        <h1 className="text-2xl font-bold">No Entry selected</h1>
                     }
                 </div>
             </Hero.Content>

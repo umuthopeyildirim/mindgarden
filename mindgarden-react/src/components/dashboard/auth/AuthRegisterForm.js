@@ -1,6 +1,6 @@
 import { Input, Button } from "react-daisyui";
 
-function AuthRegisterForm({ name, setName, email, setEmail, password, setPassword, register, registerGoogle }) {
+function AuthRegisterForm({ name, setName, email, setEmail, password, setPassword, register, username, setUsername }) {
     return (
         <div className="relative  mt-20 sm:mt-0 min-h-screen sm:flex sm:flex-row justify-center bg-transparent p-6 sm:p-24 sm:pb-0 rounded-3xl shadow-xl">
             <div className="flex justify-center self-center z-10">
@@ -16,6 +16,7 @@ function AuthRegisterForm({ name, setName, email, setEmail, password, setPasswor
                     </div>
                     <div className="space-y-6">
                         <Input value={name} onChange={(e) => setName(e.target.value)} className=" w-full text-sm text-white px-4 py-3 bg-gray-900 border border-gray-700 rounded-lg focus:outline-none focus:border-blue-400" type="text" placeholder="Name"></Input>
+                        <Input value={username} onChange={(e) => setUsername(e.target.value)} className=" w-full text-sm text-white px-4 py-3 bg-gray-900 border border-gray-700 rounded-lg focus:outline-none focus:border-blue-400" type="text" placeholder="Username"></Input>
                         <Input value={email} onChange={(e) => setEmail(e.target.value)} className=" w-full text-sm text-white px-4 py-3 bg-gray-900 border border-gray-700 rounded-lg focus:outline-none focus:border-blue-400" type="email" placeholder="Email"></Input>
                         <Input value={password} onChange={(e) => setPassword(e.target.value)} className=" w-full text-sm text-white px-4 py-3 bg-gray-900 border border-gray-700 rounded-lg focus:outline-none focus:border-blue-400" type="password" placeholder="Password"></Input>
                         <Button onClick={register} type="submit" className="w-full flex justify-center bg-blue-800 hover:bg-blue-700 text-gray-100 p-3 rounded-lg tracking-wide font-semibold cursor-pointer transition ease-in duration-500">

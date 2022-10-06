@@ -4,7 +4,7 @@ function DashboardAddNewPasswordModal({ handleToogleAddNewPassword, handleAddNew
     return (
         <Modal open={handleToogleAddNewPassword} onClickBackdrop={handleToogleAddNewPassword}>
             <Modal.Header className="font-bold">
-                Add New Password
+                Add New Entry
             </Modal.Header>
         
             <Modal.Body className="items-center text-center">
@@ -14,7 +14,7 @@ function DashboardAddNewPasswordModal({ handleToogleAddNewPassword, handleAddNew
                     <Input value={email} onChange={(e) => setEmail(e.target.value)} className=" w-full text-sm text-white px-4 py-3 bg-gray-900 border border-gray-700 rounded-lg focus:outline-none focus:border-purple-400" type="email" placeholder="Email"></Input>
                     <Input value={password} onChange={(e) => setPassword(e.target.value)} className=" w-full text-sm text-white px-4 py-3 bg-gray-900 border border-gray-700 rounded-lg focus:outline-none focus:border-purple-400" type="text" placeholder="Password"></Input>
                     <Button onClick={handleAddNewPassword} type="submit" className="w-full flex justify-center bg-purple-800  hover:bg-purple-700 text-gray-100 p-3  rounded-lg tracking-wide font-semibold  cursor-pointer transition ease-in duration-500">
-                        Add New Password
+                        Add New Entry
                     </Button>
                 </div>
             </Modal.Body>
