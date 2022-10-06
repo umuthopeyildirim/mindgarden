@@ -16,6 +16,22 @@ class ApplicationController < Sinatra::Base
     feelings.to_json
   end
 
+  post "/feelings" do
+    feeling= Feeling.new(params)
+    if feeling.save
+      status 201
+      feeling.to_json
+    else
+      status 400
+      { error: "Invalid feeling or emoji url" }.to_json
+    end
+  end
+  
+  get "/users" do
+    users=User.all
+    users.to_json
+  end
+
   post "/login" do
     user = User.find_by(login_params)
     if user.present?
@@ -94,7 +110,11 @@ class ApplicationController < Sinatra::Base
 
     # entry.update({title: title, entry: e, feeling_id: feeling_id, date: date})
 
-    entry.update(title: params[:title] || entry.title, entry: params[:entry] || entry.entry, feeling_id: params[:feeling_id] || entry.feeling_id, date: params[:date] || entry.date)  
+    entry.update(
+      title: params[:title] || entry.title, 
+      entry: params[:entry] || entry.entry, 
+      feeling_id: params[:feeling_id] || entry.feeling_id, 
+      date: params[:date] || entry.date)  
 
     entry.to_json
   end
