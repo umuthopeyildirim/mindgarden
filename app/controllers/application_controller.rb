@@ -3,16 +3,19 @@ class ApplicationController < Sinatra::Base
   
   get "/" do
     { message: "Mind Garden" }.to_json
+    status 200
   end
 
   #Entry page path
   get "/dashboard/:id" do
     entries= Entry.find(params[:id])
+    status 200
     entries.to_json
   end
 
   get "/feelings" do
     feelings= Feeling.all
+    status 200
     feelings.to_json
   end
 
@@ -29,6 +32,7 @@ class ApplicationController < Sinatra::Base
   
   get "/users" do
     users=User.all
+    status 200
     users.to_json
   end
 
@@ -56,6 +60,7 @@ class ApplicationController < Sinatra::Base
   
   get "/entries/:id" do
     entry = Entry.find(params[:id])
+    status 200
     entry.to_json
   end
 
@@ -73,6 +78,7 @@ class ApplicationController < Sinatra::Base
   delete "/entries/:id" do
     entry = Entry.find(params[:id])
     entry.destroy
+    status 200
     entry.to_json
   end
 
@@ -115,7 +121,7 @@ class ApplicationController < Sinatra::Base
       entry: params[:entry] || entry.entry, 
       feeling_id: params[:feeling_id] || entry.feeling_id, 
       date: params[:date] || entry.date)  
-
+      status 200
     entry.to_json
   end
 
