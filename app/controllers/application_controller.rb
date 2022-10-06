@@ -35,10 +35,10 @@ class ApplicationController < Sinatra::Base
   post "/login" do
     user = User.find_by(login_params)
     if user.present?
-      status 200
+      status 201
       user.to_json(only: [:id, :name, :username, :email])
     else
-      status 401
+      status 400
       { error: "Invalid username or password" }.to_json
     end
   end
