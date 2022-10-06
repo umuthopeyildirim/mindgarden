@@ -58,10 +58,11 @@ class ApplicationController < Sinatra::Base
     end
   end
   
-  get "/entries/:id" do
-    entry = Entry.find(params[:id])
+  # Get entries by user_id
+  get "/entries/user/:id" do
+    entries = Entry.where(user_id: params[:id])
     status 200
-    entry.to_json
+    entries.to_json
   end
 
   post "/entries" do
