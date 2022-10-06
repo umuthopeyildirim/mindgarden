@@ -42,12 +42,6 @@ function DashboardPasswordList({ passwords, handleSelectedPassword, handleToogle
           </button>
         </div>
         <div className="flex justify-between">
-          {/* <Input
-            onChange={(e) => handleSetSearch(e)}
-            className="rounded-md w-full"
-            type="text"
-            placeholder="Search for a password"
-          /> */}
         </div>
         <article className="h-[90%] overflow-scroll">
           <ul className="bg-slate-50 flex flex-col space-y-3">

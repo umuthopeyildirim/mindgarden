@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import DashboardBar from "../components/dashboard/DashboardBar";
 import DashboardFooter from "../components/dashboard/DashboardFooter";
@@ -14,6 +14,18 @@ function Landing(){
     const [selectedPassword, setSelectedPassword] = useState(null);
     const [toogleAddNewPassword, setToogleAddNewPassword] = useState(false);
 
+    useEffect(() => {
+        fetch("http://localhost:9292/entries/"+localStorage.getItem("id"), {
+            method: "GET",
+            headers: {
+                "Content-Type": "application/json",
+            }
+        })
+        .then(res => res.json())
+        .then(data => {
+            console.log(data);
+        })
+    }, []);
 
     const handleSelectedPassword = (key) => {
         setSelectedPassword(key);
@@ -24,7 +36,7 @@ function Landing(){
     }
 
     const handleLogout = () => {
-        localStorage.removeItem("token");
+        localStorage.removeItem("id");
         window.location.href = "/";
     }
     
