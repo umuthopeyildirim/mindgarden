@@ -1,6 +1,7 @@
 
 ReadME
 
+![image](https://user-images.githubusercontent.com/105943270/194569355-eac6c23f-f84a-4e4b-9fe7-283e51bc2c28.png)
 
 
 # Phase 3 Project : MINDGARDEN
