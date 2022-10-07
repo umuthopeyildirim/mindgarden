@@ -51,7 +51,7 @@ function AboutHero() {
             </defs>
           </svg>
           <h1 className="font-bold">200K Users</h1>
-          <p>Over the last year our Mind Garden has expaned to over 200,000 users.<br></br> Unbelivable right?!?!?</p>
+          <p>Over the last year our Mind Garden has expaned to over 200,000 users.<br></br> Unbelievable right?!?!?</p>
         </div>
       </div>
       <Hero>
