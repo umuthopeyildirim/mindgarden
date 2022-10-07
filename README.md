@@ -1,3 +1,8 @@
+
+ReadME
+
+
+
 # Phase 3 Project : MINDGARDEN
 
 ## Project members: Alixon Roman, Umut YILDIRIM, Chohye Han
