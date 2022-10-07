@@ -22,7 +22,7 @@ function Register(){
             })
         }
         else{
-            fetch("http://localhost:9292/register", {
+            fetch(process.env.REACT_APP_API_URL+"/register", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"

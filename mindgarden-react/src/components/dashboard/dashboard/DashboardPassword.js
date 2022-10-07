@@ -27,7 +27,7 @@ function DashboardPassword({ feelings, feelingId, setFeelingId, selectedEntry, h
     })
     .then((result) => {
       if (result.isConfirmed) {
-        fetch("http://localhost:9292/entries/"+selectedEntry.id, {
+        fetch(process.env.REACT_APP_API_URL+"/entries/"+selectedEntry.id, {
           method: "DELETE",
           headers: {
             "Content-Type": "application/json",

@@ -12,5 +12,10 @@ test:
   database: db/test.sqlite3
 
 production:
-  <<: *default
-  database: db/production.sqlite3
+  adapter: postgresql
+  encoding: unicode
+  database: ENV['DATABASE']
+  pool: 2
+  username: ENV['USERNAME']
+  password: ENV['PASSWORD']
+

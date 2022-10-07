@@ -23,7 +23,7 @@ function Landing(){
     const MySwal = withReactContent(Swal)
 
     useEffect(() => {
-        fetch("http://localhost:9292/entries/user/"+localStorage.getItem("id"), {
+        fetch(process.env.REACT_APP_API_URL+"/entries/user/"+localStorage.getItem("id"), {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",
@@ -34,7 +34,7 @@ function Landing(){
             setEntries(data);
         })
 
-        fetch("http://localhost:9292/feelings")
+        fetch(process.env.REACT_APP_API_URL+"/feelings")
         .then((response) => response.json())
         .then((data) => {
             setFeelings(data);
@@ -46,7 +46,7 @@ function Landing(){
     }, []);
 
     const handleAddNewPassword = () => {
-        fetch("http://localhost:9292/entries", {
+        fetch(process.env.REACT_APP_API_URL+"/entries", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -78,7 +78,7 @@ function Landing(){
     }
 
     const handleEditEntry = () => {
-        fetch("http://localhost:9292/entries/"+selectedEntry.id, {
+        fetch(process.env.REACT_APP_API_URL+"/entries/"+selectedEntry.id, {
             method: "PATCH",
             headers: {
                 "Content-Type": "application/json",
