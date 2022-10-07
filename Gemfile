@@ -38,8 +38,6 @@ gem "require_all", "~> 3.0"
 # https://github.com/alexch/rerun
 gem "rerun"
 
-gem "pg"
-
 # These gems will only be used when we are running the application locally
 group :development do
   gem "pry", "~> 0.14.1"
