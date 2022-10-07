@@ -32,7 +32,7 @@ function DashboardPassword({ feelings, feelingId, setFeelingId, selectedEntry, h
           headers: {
             "Content-Type": "application/json",
           }
-      })
+        })
     .then(res => res.json())
     .then(data => {
       swalWithBootstrapButtons.fire(
@@ -74,7 +74,11 @@ function DashboardPassword({ feelings, feelingId, setFeelingId, selectedEntry, h
                 <h1>
                   Feeling:
                   <p className="font-bold">
-                    {feelings.name[feelingId - 1]}
+                    {feelings.map((feeling) => {
+                      if (feeling.id === selectedEntry.feeling_id) {
+                        return feeling.name;
+                      }
+                    })}
                   </p>
                 </h1>
                 <Button onClick={() => handleToogleEditEntry()}>

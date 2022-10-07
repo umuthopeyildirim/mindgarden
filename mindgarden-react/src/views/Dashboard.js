@@ -74,7 +74,7 @@ function Landing(){
     const handleToogleEditEntry = () => {
         setTitle(selectedEntry.title);
         setEntry(selectedEntry.entry);
-        setFeelingId(feelingId);
+        setSelectedEntry(selectedEntry)
         setToogleEditEntry(!toogleEditEntry);
     }
 
