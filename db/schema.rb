@@ -22,7 +22,6 @@ ActiveRecord::Schema.define(version: 2022_10_03_153008) do
 
   create_table "feelings", force: :cascade do |t|
     t.string "name"
-    t.string "emoji"
   end
 
   create_table "users", force: :cascade do |t|
