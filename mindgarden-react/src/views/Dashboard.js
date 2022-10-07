@@ -5,7 +5,7 @@ import DashboardFooter from "../components/dashboard/DashboardFooter";
 import DashboardPasswordList from "../components/dashboard/dashboard/DashboardPasswordList";
 import DashboardPassword from "../components/dashboard/dashboard/DashboardPassword";
 import DashboardAddNewPasswordModal from "../components/dashboard/dashboard/DashboardAddNewPasswordModal";
-
+import DashboardEditEntry from "../components/dashboard/dashboard/DashboardEditEntry";
 import Swal from 'sweetalert2';
 import withReactContent from 'sweetalert2-react-content';
 
@@ -17,7 +17,9 @@ function Landing(){
     const [entries, setEntries] = useState([]);
     const [feelings, setFeelings] = useState([]);
     const [selectedEntry, setSelectedEntry] = useState(null);
+
     const [toogleAddNewEntry, setToogleAddNewEntry] = useState(false);
+    const [toogleEditEntry, setToogleEditEntry] = useState(false);
     const MySwal = withReactContent(Swal)
 
     useEffect(() => {
@@ -36,6 +38,7 @@ function Landing(){
         .then((response) => response.json())
         .then((data) => {
             setFeelings(data);
+            setFeelingId(data[0].id);
         });
 
         // Set user id from local storage
@@ -68,10 +71,47 @@ function Landing(){
         })
     }
 
+    const handleToogleEditEntry = () => {
+        setTitle(selectedEntry.title);
+        setEntry(selectedEntry.entry);
+        setSelectedEntry(selectedEntry)
+        setToogleEditEntry(!toogleEditEntry);
+    }
+
+    const handleEditEntry = () => {
+        fetch("http://localhost:9292/entries/"+selectedEntry.id, {
+            method: "PATCH",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                title: title,
+                entry: entry,
+                user_id: userId,
+                feeling_id: feelingId
+            })
+        })
+        .then(res => res.json())
+        .then(data => {
+            setEntries(entries.map(entry => {
+                if(entry.id === data.id){
+                    return data;
+                }else{
+                    return entry;
+                }
+            }));
+            setToogleEditEntry(false);
+            MySwal.fire({
+                title: "Success",
+                text: "Entry edited successfully",
+                icon: "success",
+                confirmButtonText: "Ok"
+            })
+        })
+    }
+
     const handleSelectedEntry = (key) => {
         setSelectedEntry(entries[key]);
-        console.log(selectedEntry)
-
     }
 
     const handleToogleAddNewEntry = () => {
@@ -88,11 +128,17 @@ function Landing(){
             <DashboardBar logout={handleLogout} page="Dashboard"/>
             <div className="flex col">
                 <DashboardPasswordList entries={entries} handleSelectedEntry={handleSelectedEntry} handleToogleAddNewEntry={handleToogleAddNewEntry} />
-                <DashboardPassword selectedEntry={selectedEntry} />
+                <DashboardPassword feelings={feelings} feelingId={feelingId} setFeelingId={setFeelingId} selectedEntry={selectedEntry} handleToogleEditEntry={handleToogleEditEntry} />
                 {
                     toogleAddNewEntry ? 
                         <DashboardAddNewPasswordModal handleToogleAddNewEntry={handleToogleAddNewEntry} handleAddNewPassword={handleAddNewPassword} title={title} setTitle={setTitle} entry={entry} setEntry={setEntry} feelingId={feelingId} setFeelingId={setFeelingId} feelings={feelings}/> 
                     : 
+                        null
+                }
+                {
+                    toogleEditEntry ?
+                        <DashboardEditEntry handleToogleEditEntry={handleToogleEditEntry} handleEditEntry={handleEditEntry} title={title} setTitle={setTitle} entry={entry} setEntry={setEntry} feelingId={feelingId} selectedEntry={selectedEntry} setFeelingId={setFeelingId} feelings={feelings} />
+                    :
                         null
                 }
             </div>

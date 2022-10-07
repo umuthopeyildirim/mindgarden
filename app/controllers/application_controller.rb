@@ -120,8 +120,8 @@ class ApplicationController < Sinatra::Base
     entry.update(
       title: params[:title] || entry.title, 
       entry: params[:entry] || entry.entry, 
-      feeling_id: params[:feeling_id] || entry.feeling_id, 
-      date: params[:date] || entry.date)  
+      feeling_id: params[:feeling_id] || entry.feeling_id
+    )
     status 200
     entry.to_json
   end

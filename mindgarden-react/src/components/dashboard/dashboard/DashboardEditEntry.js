@@ -1,15 +1,15 @@
 import { Modal, Input, Button, Textarea } from "react-daisyui";
 
-function DashboardAddNewPasswordModal({ handleToogleAddNewEntry, handleAddNewPassword, title, setTitle, entry, setEntry, feelingId, setFeelingId, feelings}) {
+function DashboardEditEntry({ handleToogleEditEntry, handleEditEntry, title, setTitle, entry, setEntry, feelingId, setFeelingId, feelings, selectedEntry }) {
     const handleChange = event => {
       console.log(event.target.value);
       setFeelingId(event.target.value);
     };
-    
+    console.log(selectedEntry);
     return (
-        <Modal open={handleToogleAddNewEntry} onClickBackdrop={handleToogleAddNewEntry}>
+        <Modal open={handleToogleEditEntry} onClickBackdrop={handleToogleEditEntry}>
             <Modal.Header className="font-bold">
-                Add New Entry
+                Edit Entry
             </Modal.Header>
         
             <Modal.Body className="items-center text-center">
@@ -23,8 +23,8 @@ function DashboardAddNewPasswordModal({ handleToogleAddNewEntry, handleAddNewPas
                             </option>
                         ))}
                     </select>
-                    <Button onClick={handleAddNewPassword} type="submit" className="w-full flex justify-center bg-purple-800  hover:bg-purple-700 text-gray-100 p-3  rounded-lg tracking-wide font-semibold  cursor-pointer transition ease-in duration-500">
-                        Add New Entry
+                    <Button onClick={handleEditEntry} type="submit" className="w-full flex justify-center bg-purple-800  hover:bg-purple-700 text-gray-100 p-3  rounded-lg tracking-wide font-semibold  cursor-pointer transition ease-in duration-500">
+                        Edit Entry
                     </Button>
                 </div>
             </Modal.Body>
@@ -32,4 +32,4 @@ function DashboardAddNewPasswordModal({ handleToogleAddNewEntry, handleAddNewPas
     );
 }
 
-export default DashboardAddNewPasswordModal;
+export default DashboardEditEntry;
