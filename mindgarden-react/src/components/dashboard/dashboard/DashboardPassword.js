@@ -2,11 +2,11 @@ import { Hero } from "react-daisyui";
 
 function DashboardPassword({ selectedEntry }){
     return (
-        <Hero className="w-2/4">
-            <Hero.Content className="text-center">
-                <div className="max-w-md space-y-5">
-                    {selectedEntry ?
-                        <>
+        <div>
+            {selectedEntry ?
+                <>
+                    <Hero>
+                        <Hero.Content>
                             <div className="flex-row text-center">
                                 <h1 className="text-2xl font-bold">{selectedEntry.title}</h1>
                             </div>
@@ -22,13 +22,17 @@ function DashboardPassword({ selectedEntry }){
                                     <button>Copy</button>
                                 </div>
                             </div>
-                        </>
-                    :
+                        </Hero.Content>
+                    </Hero>
+                </>
+            :
+                <Hero>
+                    <Hero.Content>
                         <h1 className="text-2xl font-bold">No Entry selected</h1>
-                    }
-                </div>
-            </Hero.Content>
-        </Hero>
+                    </Hero.Content>
+                </Hero>
+            }
+        </div>
     );
 }
 
