@@ -20,10 +20,6 @@ gem "rack-cors", "~> 1.1"
 # https://guides.rubyonrails.org/active_record_basics.html
 gem "activerecord", "~> 6.1"
 
-# Configures common Rake tasks for working with Active Record
-# https://github.com/sinatra-activerecord/sinatra-activerecord
-gem "sinatra-activerecord", "~> 2.0"
-
 # Run common tasks from the command line
 # https://github.com/ruby/rake
 gem "rake", "~> 13.0"
