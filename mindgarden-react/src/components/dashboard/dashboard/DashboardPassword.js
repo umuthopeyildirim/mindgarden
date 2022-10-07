@@ -78,6 +78,9 @@ function DashboardPassword({ feelings, feelingId, setFeelingId, selectedEntry, h
                       if (feeling.id === selectedEntry.feeling_id) {
                         return feeling.name;
                       }
+                      else {
+                        return null;
+                      }
                     })}
                   </p>
                 </h1>
