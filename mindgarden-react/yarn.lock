@@ -8441,7 +8441,7 @@ sweetalert2-react-content@^5.0.3:
   resolved "https://registry.yarnpkg.com/sweetalert2-react-content/-/sweetalert2-react-content-5.0.7.tgz#6fd7299978b2e0221d3049746ff2b39c1a7aa72d"
   integrity sha512-8Fk82Mpk45lFXpJWKIFF/lq8k/dJKDDQGFcuqVosaL/qRdViyAs5+u37LoTGfnOIvf+rfQB3PAXcp1XLLn+0ew==
 
-sweetalert2@^11.4.8:
+sweetalert2@^11.7.0:
   version "11.7.0"
   resolved "https://registry.yarnpkg.com/sweetalert2/-/sweetalert2-11.7.0.tgz#17e55d6a1901a84391b6f1b576d156c475a5bcaf"
   integrity sha512-ICeeGhIsmzCwRD/XjZrBYk+SDQzwfGvIdxkeSpPFgkPwbnoaGnaZ4cOb7AD/iC5o50snQUF6w23MfFAGk1+J7A==
