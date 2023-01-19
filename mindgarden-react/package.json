@@ -24,7 +24,7 @@
     "react-icons": "^4.4.0",
     "react-router-dom": "^6.4.1",
     "react-scripts": "^5.0.1",
-    "sweetalert2": "^11.4.37",
+    "sweetalert2": "^11.4.8",
     "sweetalert2-react-content": "^5.0.3",
     "tailwindcss": "^3.1.8",
     "web-vitals": "^2.1.4"
