@@ -1,0 +1,371 @@
+{
+	"info": {
+		"_postman_id": "9e1db3d9-a443-48f0-a1c8-2fcbea03f298",
+		"name": "MindGarden API Local",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5005359",
+		"_collection_link": "https://umuthopeyildirim.postman.co/workspace/MindGarden~e61ef601-ff42-4f8f-aee6-eb3173e29496/collection/22818761-9e1db3d9-a443-48f0-a1c8-2fcbea03f298?action=share&source=collection_link&creator=5005359"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\" :\"umut@gmail.com\",\n    \"password\" : \"U123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/login",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Login 200",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\" :\"umut475@gmail.com\",\n    \"password\" : \"umut475475\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/login",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": null,
+					"cookie": [],
+					"body": "{\n    \"user_id\" : 1,\n    \"name\" : \"Umut YILDIRIM\",\n    \"username\" : \"hope\",\n    \"email\" : \"umut475@gmail.com\"\n}"
+				},
+				{
+					"name": "Login 401",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\" :\"wrong_email@gmail.com\",\n    \"password\" : \"wrong_pass\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/login",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\" : \"Umut YILDIRIM\",\n    \"username\" : \"hope\",\n    \"email\" : \"umut475@gmail.com\",\n    \"password\" : \"pass\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9292/register",
+					"host": [
+						"localhost"
+					],
+					"port": "9292",
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Feelings",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/feelings",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"feelings"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Feelings",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:9292/feelings",
+							"host": [
+								"localhost"
+							],
+							"port": "9292",
+							"path": [
+								"feelings"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1422"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Server",
+							"value": "thin"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 1,\n        \"name\": \"Happy\",\n        \"emoji\": \"https://cdn.pixabay.com/photo/2020/12/27/20/24/smile-5865208_1280.png\"\n    },\n    {\n        \"id\": 2,\n        \"name\": \"Surprised\",\n        \"emoji\": \"https://cdn.pixabay.com/photo/2019/02/19/07/23/graphic-4006221_960_720.png\"\n    },\n    {\n        \"id\": 3,\n        \"name\": \"Angry\",\n        \"emoji\": \"https://cdn.pixabay.com/photo/2016/09/14/16/44/emoticon-1669804_960_720.png\"\n    },\n    {\n        \"id\": 4,\n        \"name\": \"In Love\",\n        \"emoji\": \"https://cdn.pixabay.com/photo/2017/09/11/23/41/emoji-2740857_960_720.png\"\n    },\n    {\n        \"id\": 5,\n        \"name\": \"Frustrated\",\n        \"emoji\": \"https://cdn.pixabay.com/photo/2016/08/11/09/50/emoji-1585197_960_720.png\"\n    },\n    {\n        \"id\": 6,\n        \"name\": \"Sad\",\n        \"emoji\": \"https://cdn.pixabay.com/photo/2012/04/25/01/27/alien-41608_960_720.png\"\n    },\n    {\n        \"id\": 7,\n        \"name\": \"Secretive\",\n        \"emoji\": \"https://cdn.pixabay.com/photo/2016/08/22/10/17/emoticon-1611647_960_720.png\"\n    },\n    {\n        \"id\": 8,\n        \"name\": \"Depressed\",\n        \"emoji\": \"https://cdn.pixabay.com/photo/2012/04/25/01/28/alien-41609_960_720.png\"\n    },\n    {\n        \"id\": 9,\n        \"name\": \"Sleepy\",\n        \"emoji\": \"https://cdn.pixabay.com/photo/2019/02/15/21/09/graphic-3999327_960_720.png\"\n    },\n    {\n        \"id\": 10,\n        \"name\": \"Funny\",\n        \"emoji\": \"https://cdn.pixabay.com/photo/2020/02/09/09/38/smiley-4832492_960_720.png\"\n    },\n    {\n        \"id\": 11,\n        \"name\": \"Blushed\",\n        \"emoji\": \"https://cdn.pixabay.com/photo/2012/04/25/01/31/alien-41617_960_720.png\"\n    },\n    {\n        \"id\": 12,\n        \"name\": \"Burned Out\",\n        \"emoji\": \"https://cdn.pixabay.com/photo/2019/11/14/03/22/shocked-4625235_960_720.png\"\n    },\n    {\n        \"id\": 13,\n        \"name\": \"Sick\",\n        \"emoji\": \"https://cdn.pixabay.com/photo/2012/04/25/01/32/alien-41619_960_720.png\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Get Entries",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"user_id\" : 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9292/entries/1",
+					"host": [
+						"localhost"
+					],
+					"port": "9292",
+					"path": [
+						"entries",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post Entries",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\" : \"Sunny Day\",\n    \"entry\" : \"Today we had lots of vitamin Ds\",\n    \"user_id\" : 2,\n    \"feeling_id\" : 4,\n    \"created_at\" : \"now\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9292/entries",
+					"host": [
+						"localhost"
+					],
+					"port": "9292",
+					"path": [
+						"entries"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Entries",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 7,\n    \"title\": \"Last Day for Project\",\n    \"entry\": \"So much learning happening!\",\n    \"user_id\": 1,\n    \"feeling_id\": 2,\n    \"date\": NULL\n}"
+				},
+				"url": {
+					"raw": "{{URL}}/entries/6",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"entries",
+						"6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Entries",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"Sunny Day \"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9292/entries/7",
+					"host": [
+						"localhost"
+					],
+					"port": "9292",
+					"path": [
+						"entries",
+						"7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Feeling Post",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Bored\",\n    \"emoji\": \"https://cdn.pixabay.com/photo/2016/08/31/20/04/emoticon-1634515_960_720.png\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/feelings",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"feelings"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get entries by user_id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}//entries/user/9",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"",
+						"entries",
+						"user",
+						"9"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

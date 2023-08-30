@@ -87,36 +87,6 @@ class ApplicationController < Sinatra::Base
     # binding.pry
     entry = Entry.find(params[:id])
 
-    # title = ""  
-    # if(params[:title] == nil)
-    #   title = entry.title
-    # else
-    #   title = params[:title]
-    # end
-
-    # e = ""
-    # if(params[:entry] == nil)
-    #   e = entry.entry
-    # else
-    #   e = params[:entry]
-    # end
-
-    # feeling_id = ""
-    # if(params[:feeling_id] == nil)
-    #   feeling_id = entry.feeling_id
-    # else
-    #   feeling_id = params[:feeling_id]
-    # end
-
-    # date = ""
-    # if(params[:date] == nil)
-    #   date = entry.date
-    # else
-    #   date = params[:date]
-    # end
-
-    # entry.update({title: title, entry: e, feeling_id: feeling_id, date: date})
-
     entry.update(
       title: params[:title] || entry.title, 
       entry: params[:entry] || entry.entry, 
